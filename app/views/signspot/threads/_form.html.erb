@@ -1,0 +1,17 @@
+<%= form_for(@signspot_thread) do |f| %>
+  <% if @signspot_thread.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@signspot_thread.errors.count, "error") %> prohibited this signspot_thread from being saved:</h2>
+
+      <ul>
+      <% @signspot_thread.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
