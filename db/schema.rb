@@ -11,11 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120627163118) do
+ActiveRecord::Schema.define(:version => 20120627185734) do
 
   create_table "signspot_threads", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "title"
+    t.integer  "state"
   end
 
 end

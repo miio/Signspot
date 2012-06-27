@@ -1,2 +1,2 @@
-class Signspot::Thread < ActiveRecord::Base
+class Signspot::Thread < Signspot::Base
 end
