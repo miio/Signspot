@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120701144620) do
+ActiveRecord::Schema.define(:version => 20120701163051) do
 
   create_table "signspot_projects", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20120701144620) do
     t.text     "title"
     t.string   "slug"
   end
+
+  add_index "signspot_projects", ["slug"], :name => "slug_unique_index", :unique => true
 
   create_table "signspot_threads", :force => true do |t|
     t.datetime "created_at", :null => false

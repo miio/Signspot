@@ -22,9 +22,17 @@ describe Signspot::Project do
     before { @project = FactoryGirl.build(:signspot_sign_slug_project) }
     it { @project.save.should be_false }
    end
-#   context "プロジェクトのslugはユニークであること" do
-# 
-#   end
+   context "プロジェクトのslugはユニークであること" do
+    before do
+      @first_project = FactoryGirl.build(:signspot_project)
+      @second_project = FactoryGirl.build(:signspot_project)
+    end
+    it do
+      @first_project.save.should be_true
+      @second_project.save.should be_false
+    end
+
+   end
 #   context "プロジェクトの管理人が最低1人いること" do
 # 
 #   end
