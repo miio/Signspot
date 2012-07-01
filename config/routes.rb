@@ -1,4 +1,6 @@
 Signspot::Application.routes.draw do
+  namespace :signspot do resources :projects end
+
   namespace :signspot do resources :threads end
 
   # The priority is based upon order of creation:
