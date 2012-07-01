@@ -4,7 +4,7 @@
 FactoryGirl.define do
   factory :signspot_project, :class => 'Signspot::Project' do |p|
     p.title "初めてのプロジェクト"
-    p.slug "first_project-sign_post"
+    p.slug "first_project-sign_post123"
   end
   factory :signspot_empty_title_project, :parent => 'signspot_project' do |p|
     p.title ""
