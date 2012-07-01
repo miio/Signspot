@@ -6,6 +6,14 @@ describe Signspot::Project do
     before { @project = FactoryGirl.build(:signspot_project) }
     it { @project.save.should be_true }
    end
+   context "プロジェクトのタイトルは必須" do
+    before { @project = FactoryGirl.build(:signspot_empty_title_project) }
+    it { @project.save.should be_false }
+   end
+   context "プロジェクトのslugは必須" do
+    before { @project = FactoryGirl.build(:signspot_empty_slug_project) }
+    it { @project.save.should be_false }
+   end
 #   context "プロジェクトのslugは英数字のみであること" do
 # 
 #   end

@@ -6,4 +6,10 @@ FactoryGirl.define do
     p.title "初めてのプロジェクト"
     p.slug "first_project"
   end
+  factory :signspot_empty_title_project, :parent => 'signspot_project' do |p|
+    p.title ""
+  end
+  factory :signspot_empty_slug_project, :parent => 'signspot_project' do |p|
+    p.slug ""
+  end
 end
