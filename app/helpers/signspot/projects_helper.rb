@@ -1,0 +1,2 @@
+module Signspot::ProjectsHelper
+end

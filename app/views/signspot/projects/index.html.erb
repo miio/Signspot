@@ -1,0 +1,21 @@
+<h1>Listing signspot_projects</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @signspot_projects.each do |signspot_project| %>
+  <tr>
+    <td><%= link_to 'Show', signspot_project %></td>
+    <td><%= link_to 'Edit', edit_signspot_project_path(signspot_project) %></td>
+    <td><%= link_to 'Destroy', signspot_project, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project', new_signspot_project_path %>
