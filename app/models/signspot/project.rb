@@ -1,6 +1,7 @@
 #-*- encoding: utf-8 -*- 
 class Signspot::Project < Signspot::Base
-  include ActiveModel::Validations
-  validates_presence_of :title # タイトルが空でないことを検証する
-  validates_presence_of :slug # slugが空でないことを検証する
+  validates :title, :presence => true # タイトルが空でないことを検証する
+  validates :slug,
+    :presence => true, # slugが空でないことを検証する
+    :format =>{:with => /\A\w[\w\.+\-_ ]+$/, :on => :create} # slugが英数字orアンダーバーorハイフンであることを検証する
 end

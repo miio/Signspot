@@ -14,9 +14,14 @@ describe Signspot::Project do
     before { @project = FactoryGirl.build(:signspot_empty_slug_project) }
     it { @project.save.should be_false }
    end
-#   context "プロジェクトのslugは英数字のみであること" do
-# 
-#   end
+   context "プロジェクトのslugにマルチバイト文字は使ってはいけない" do
+    before { @project = FactoryGirl.build(:signspot_multibyte_slug_project) }
+    it { @project.save.should be_false }
+   end
+   context "プロジェクトのslugに記号は使ってはいけない" do
+    before { @project = FactoryGirl.build(:signspot_sign_slug_project) }
+    it { @project.save.should be_false }
+   end
 #   context "プロジェクトのslugはユニークであること" do
 # 
 #   end
