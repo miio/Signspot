@@ -1,10 +1,15 @@
+#-*- encoding: utf-8 -*- 
 require 'spec_helper'
 
 describe Signspot::Project do
-#   context "プロジェクトが建てられること" do
+   context "プロジェクトが建てられること" do
+    before { @project = FactoryGirl.build(:signspot_project) }
+    it { @project.save.should be_true }
+   end
+#   context "プロジェクトのslugは英数字のみであること" do
 # 
 #   end
-#   context "プロジェクトのslugは英数字のみであること" do
+#   context "プロジェクトのslugはユニークであること" do
 # 
 #   end
 #   context "プロジェクトの管理人が最低1人いること" do

@@ -1,2 +1,2 @@
-class Signspot::Project < ActiveRecord::Base
+class Signspot::Project < Signspot::Base
 end
