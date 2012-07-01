@@ -18,7 +18,7 @@ describe Signspot::Project do
     before { @project = FactoryGirl.build(:signspot_multibyte_slug_project) }
     it { @project.save.should be_false }
    end
-   context "プロジェクトのslugに記号は使ってはいけない" do
+   context "プロジェクトのslugに「-」と「_」以外の記号は使ってはいけない" do
     before { @project = FactoryGirl.build(:signspot_sign_slug_project) }
     it { @project.save.should be_false }
    end
